@@ -1,0 +1,15 @@
+<a href="/logout">Logout</a>
+
+<ul>
+<% @dogs.each do |dog| %>
+  <li>
+    <a href="/dogs/<%= dog.id %>"><%= dog.name %></a>
+    <form action="/dogs/<%= dog.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Put to sleep">
+    </form>
+  </li>
+<% end %>
+</ul>
+
+<a href="/dogs/new">Add a dog</a>

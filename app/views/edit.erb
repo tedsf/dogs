@@ -1,0 +1,9 @@
+<h3>Edit a dog</h3>
+
+<form action="/dogs/<%= @dog.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+
+  <%= erb :_form_fields %>
+
+  <input type="submit" value="Update dog!">
+</form>
